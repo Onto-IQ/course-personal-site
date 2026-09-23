@@ -13,7 +13,7 @@ describe('lab05 api persistence', () => {
     process.env.DATA_DIR = dataDir;
     rmSync(dataDir, { recursive: true, force: true });
     mkdirSync(dataDir, { recursive: true });
-    const { insertContact, getDb } = await import('../src/lib/db');
+    const { insertContact, getDb } = await import('../../src/lib/db');
     // Force re-init by dynamic import after env set — module may cache; call getDb first
     getDb();
     const row = insertContact({
@@ -27,7 +27,7 @@ describe('lab05 api persistence', () => {
 
   it('guestbook list/insert roundtrip', async () => {
     process.env.DATA_DIR = dataDir;
-    const { insertGuestbook, listGuestbook } = await import('../src/lib/db');
+    const { insertGuestbook, listGuestbook } = await import('../../src/lib/db');
     insertGuestbook({ name: 'Bob', message: 'Nice site' });
     const rows = listGuestbook();
     expect(rows.some((r) => r.name === 'Bob')).toBe(true);
