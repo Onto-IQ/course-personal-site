@@ -1,4 +1,5 @@
 ---
+export const prerender = false;
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { loadProfile } from '../lib/profile';
 const profile = loadProfile();
@@ -10,3 +11,4 @@ const profile = loadProfile();
     <p>Lab 04 (Claude): ขยายหน้านี้ด้วย timeline / skills / links ตาม DECISIONS.md</p>
   </article>
 </BaseLayout>
+

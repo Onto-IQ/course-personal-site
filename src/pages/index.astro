@@ -1,4 +1,5 @@
 ---
+export const prerender = false;
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { loadProfile } from '../lib/profile';
 const profile = loadProfile();
@@ -18,3 +19,4 @@ const profile = loadProfile();
     <a class="card" href="/guestbook"><h2>Guestbook</h2><p>ฝากคำทักทาย</p></a>
   </section>
 </BaseLayout>
+
