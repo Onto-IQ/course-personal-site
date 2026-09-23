@@ -12,7 +12,7 @@
     "astro": "astro",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:labs": "vitest run tests/labs",
+    "test:labs": "vitest run --config vitest.labs.config.ts",
     "test:e2e": "playwright test",
     "start": "node ./dist/server/entry.mjs",
     "create-issues": "node scripts/create-course-issues.mjs"
